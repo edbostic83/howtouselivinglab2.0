@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Use the Living Lab — From Tools to Impact</title>
+  <meta name="description" content="A high-contrast, step-by-step guide to using the Living Lab site to move from tools to impact. Includes activities, examples, and links.">
+  <style>
+    :root{
+      --navy:#001F3F; --gold:#FFD700; --ink:#0b1220; --bg:#ffffff; --muted:#334155; --card:#f5f7fb;
+      --ok:#0f766e; --warn:#b45309; --accent:#0ea5e9;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.45;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    header{
+      background:linear-gradient(135deg,var(--navy) 0%, #012e64 50%, #001f3f 100%);
+      color:#fff; padding:28px 18px;
+      border-bottom:4px solid var(--gold);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+    h1{font-size: clamp(1.6rem, 2.5vw, 2.25rem); margin:0 0 6px 0}
+    .sub{opacity:.95; margin:0}
+    nav{
+      position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid #e5e7eb;
+    }
+    .tabs{display:flex; gap:.5rem; overflow:auto; white-space:nowrap; padding:10px 18px}
+    .tab{
+      border:1px solid #e5e7eb; padding:8px 12px; border-radius:12px; text-decoration:none;
+      color:var(--muted); font-weight:600; background:#fff;
+    }
+    .tab:hover,.tab:focus{outline:2px solid var(--gold)}
+    main{padding:18px 0 48px 0}
+    section{background:var(--card); border:1px solid #e5e7eb; border-radius:14px; padding:16px; margin:14px 0}
+    h2{color:var(--navy); border-bottom:2px solid var(--gold); padding-bottom:6px; margin-top:0}
+    h3{color:var(--navy)}
+    p.lead{font-size:1.05rem}
+    .btn{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:10px 14px; border-radius:10px; border:1px solid #d1d5db; background:#fff; color:#111827;
+      text-decoration:none; font-weight:700; cursor:pointer;
+    }
+    .btn:hover{background:#f8fafc}
+    .btn-gold{background:var(--gold); border-color:#c8a800; color:#111827}
+    .btn-navy{background:var(--navy); border-color:#001232; color:#fff}
+    .btn-ghost{background:transparent}
+    .grid{display:grid; gap:12px}
+    .g-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+    .g-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+    @media (max-width:820px){ .g-2,.g-3{grid-template-columns:1fr} }
+    .note{background:#fff; border-left:4px solid var(--gold); padding:10px 12px; border-radius:8px}
+    .kbd{display:inline-block; padding:2px 6px; border:1px solid #cbd5e1; border-bottom-width:2px; border-radius:6px; background:#fff}
+    table{width:100%; border-collapse:collapse; margin-top:10px; background:#fff}
+    th,td{border:1px solid #cbd5e1; padding:10px; vertical-align:top}
+    th{background:var(--navy); color:var(--gold); text-align:left}
+    tbody tr:nth-child(even){background:#f8fafc}
+    .small{font-size:.92rem}
+    .muted{color:#475569}
+    .callout{background:#fff; border:1px dashed var(--gold); padding:12px; border-radius:10px}
+    .chip{display:inline-flex; align-items:center; padding:2px 8px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe; color:#1e3a8a; font-weight:700; font-size:.85rem}
+    .actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    /* Accessibility Bar */
+    .access{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+    .hc body, .hc section, .hc table{background:#fff !important; color:#000 !important}
+    .hc th{background:#000 !important; color:#FFD700 !important}
+    footer{padding:24px 18px; border-top:1px solid #e5e7eb; margin-top:20px}
+    .footer-grid{display:grid; gap:12px; grid-template-columns: 1.2fr .8fr}
+    @media (max-width:800px){ .footer-grid{grid-template-columns:1fr} }
+    .tight ul{margin:0; padding-left:20px}
+    .tight li{margin-bottom:6px}
+    .warning{color:#8b5e00; font-weight:700}
+    .success{color:#0f5132; font-weight:700}
+    code{background:#0b1023; color:#f8f8f2; padding:2px 6px; border-radius:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>How to Use the Living Lab <span aria-hidden="true">—</span> <span class="chip">From Tools to Impact</span></h1>
+      <p class="sub">A do‑it‑now guide that walks you through the site’s core modules with concrete, real‑world activities. Built for teachers, leaders, SPED/EB coaches, and central office.</p>
+      <div class="actions" style="margin-top:10px">
+        <a class="btn btn-gold" href="https://edbostic83.github.io/toolsto-impact-fixed/#about" target="_blank" rel="noopener">Open the Living Lab</a>
+        <a class="btn btn-navy" href="#quickstart">Quick Start (5 min)</a>
+        <a class="btn" href="#modules">Module Guide</a>
+        <a class="btn" href="#tables">Activity Tables</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Section navigation">
+    <div class="tabs wrap">
+      <a class="tab" href="#access">Accessibility</a>
+      <a class="tab" href="#quickstart">Quick Start</a>
+      <a class="tab" href="#thesis">Impact Thesis</a>
+      <a class="tab" href="#modules">Modules (Planner, Data, Comm)</a>
+      <a class="tab" href="#guided">Guided Examples</a>
+      <a class="tab" href="#tables">Tables & Worksheets</a>
+      <a class="tab" href="#future">Glitches & 2.0 Updates</a>
+      <a class="tab" href="#contact">About & Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <section id="access" aria-labelledby="access_h">
+      <h2 id="access_h">Accessibility Controls</h2>
+      <div class="access">
+        <button class="btn" onclick="adjFont(1)" aria-label="Increase font size">A+</button>
+        <button class="btn" onclick="adjFont(-1)" aria-label="Decrease font size">A-</button>
+        <button class="btn" onclick="toggleHC()" aria-pressed="false" id="hcbtn">High Contrast</button>
+        <span class="muted small">Tip: Print this page or save as PDF (<span class="kbd">Ctrl/Cmd</span> + <span class="kbd">P</span>)</span>
+      </div>
+    </section>
+
+    <section id="quickstart">
+      <h2>Quick Start (5 minutes)</h2>
+      <p class="lead">Use this when you have a tool on your campus and need impact, not more clicks.</p>
+      <ol class="tight">
+        <li><strong>Open:</strong> <a href="https://edbostic83.github.io/toolsto-impact-fixed/#planner" target="_blank" rel="noopener">Planner</a> on the Living Lab.</li>
+        <li><strong>Define the habit:</strong> In <em>Weekly routine</em>, write one observable behavior (e.g., “Peer feedback every Wednesday”).</li>
+        <li><strong>Outcome:</strong> Add the metric you expect to move in 2–6 weeks (e.g., “+1 rubric level for 60%”).</li>
+        <li><strong>Owner & cadence:</strong> Who owns this and how often? (e.g., “6th ELA team • weekly”).</li>
+        <li><strong>Export & share:</strong> Click <em>Generate Plan → Copy</em> and paste into your PLC notes or email.</li>
+      </ol>
+      <div class="actions">
+        <a class="btn btn-navy" href="https://edbostic83.github.io/toolsto-impact-fixed/#planner" target="_blank" rel="noopener">Go to Planner</a>
+        <a class="btn" href="#guided">See a guided example</a>
+      </div>
+    </section>
+
+    <section id="thesis">
+      <h2>Impact Thesis & Core Framework</h2>
+      <div class="grid g-2">
+        <div>
+          <h3 class="small" style="margin:0 0 6px 0">The Impact Thesis</h3>
+          <p>Impact is a <strong>human response</strong> to information. Our goal is to move from tool → <em>actionable behavior</em> with transparent evidence.</p>
+          <div class="callout small">
+            <strong>Three Pillars:</strong> Inspire purpose · Motivate action · Build trust with transparent routines.
+          </div>
+        </div>
+        <div>
+          <h3 class="small" style="margin:0 0 6px 0">The Impact Ladder (5 steps)</h3>
+          <ol class="tight small">
+            <li><strong>Tool</strong> → What is it?</li>
+            <li><strong>Use</strong> → How is it used weekly?</li>
+            <li><strong>Behavior</strong> → What observable habit changes?</li>
+            <li><strong>Outcome</strong> → What metric moves?</li>
+            <li><strong>Evidence</strong> → What artifact proves it?</li>
+          </ol>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://edbostic83.github.io/toolsto-impact-fixed/#framework" target="_blank" rel="noopener">View on the Living Lab</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules">
+      <h2>Module Guide (What to do in each part of the site)</h2>
+
+      <article>
+        <h3>Module 1 — Planning & Prompting</h3>
+        <p class="muted small"><strong>Tools:</strong> Planner · RISEN Prompt Studio</p>
+        <ul class="tight">
+          <li><strong>Planner:</strong> Lock the weekly habit, owner, cadence, outcome, and the standard/policy alignment.</li>
+          <li><strong>RISEN:</strong> Build the exact prompt to make AI a <em>thinking partner</em> (Relevance, Intent, Specificity, Execution, Navigation).</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-navy" href="https://edbostic83.github.io/toolsto-impact-fixed/#planner" target="_blank" rel="noopener">Open Planner</a>
+          <a class="btn" href="https://edbostic83.github.io/toolsto-impact-fixed/#risen" target="_blank" rel="noopener">Open RISEN</a>
+        </div>
+        <div class="note small" style="margin-top:10px">
+          <strong>Activity 1 (5 min):</strong> Name your most expensive/complex tool. In <em>Planner</em>, define the Behavior and Outcome it should drive. In <em>RISEN</em>, generate the coaching prompt you’ll use with staff.
+        </div>
+      </article>
+
+      <article>
+        <h3>Module 2 — Data & Discovery</h3>
+        <p class="muted small"><strong>Tools:</strong> Data Prep Coach · AI Platform Finder</p>
+        <ul class="tight">
+          <li><strong>Data Prep Coach:</strong> Write the AI‑ready spec (grain, window, fields, privacy). If data is messy, fix the process before using AI.</li>
+          <li><strong>Platform Finder:</strong> Choose by <em>need</em> (create/transform/analyze/communicate/automate), inputs, outputs, constraints, and risk.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-navy" href="https://edbostic83.github.io/toolsto-impact-fixed/#data-prep" target="_blank" rel="noopener">Open Data Prep</a>
+          <a class="btn" href="https://edbostic83.github.io/toolsto-impact-fixed/#platform-finder" target="_blank" rel="noopener">Open Platform Finder</a>
+        </div>
+        <div class="note small" style="margin-top:10px">
+          <strong>Activity 2 (5 min):</strong> In <em>Platform Finder</em>, choose a Goal (e.g., Automate) and an Input (e.g., Spreadsheet). Copy the top two <em>Search Strings</em> it generates.
+        </div>
+      </article>
+
+      <article>
+        <h3>Module 3 — Communication & Integration</h3>
+        <p class="muted small"><strong>Tools:</strong> 3‑Sentence Story · Process Plug‑In · Sell It</p>
+        <ul class="tight">
+          <li><strong>3‑Sentence Story:</strong> Challenge → Simple Action → Human Impact.</li>
+          <li><strong>Process Plug‑In:</strong> Add one AI‑ready step into an existing, required process (IEP, 504, PD, hiring).</li>
+          <li><strong>Sell It:</strong> Turn your plan into a two‑sentence pitch for principals/board.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-navy" href="https://edbostic83.github.io/toolsto-impact-fixed/#story" target="_blank" rel="noopener">Open 3‑Sentence Story</a>
+          <a class="btn" href="https://edbostic83.github.io/toolsto-impact-fixed/#process-plug" target="_blank" rel="noopener">Open Process Plug‑In</a>
+          <a class="btn" href="https://edbostic83.github.io/toolsto-impact-fixed/#sell" target="_blank" rel="noopener">Open Sell It</a>
+        </div>
+        <div class="note small" style="margin-top:10px">
+          <strong>Activity 3 (3 min):</strong> Using your Ladder and Planner, write a two‑sentence pitch in <em>Sell It</em>. Share with your table and refine once.
+        </div>
+      </article>
+    </section>
+
+    <section id="guided">
+      <h2>Guided Examples (do these live)</h2>
+      <div class="grid g-3">
+        <div class="callout">
+          <h3 class="small" style="margin-top:0">Teacher Example</h3>
+          <p class="small"><strong>Tool:</strong> Flip · <strong>Behavior:</strong> Peer feedback Wednesdays · <strong>Outcome:</strong> +1 rubric level for 60% · <strong>Evidence:</strong> Rubric growth + exemplars.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://edbostic83.github.io/toolsto-impact-fixed/#planner" target="_blank" rel="noopener">Prefill Planner</a>
+          </div>
+        </div>
+        <div class="callout">
+          <h3 class="small" style="margin-top:0">Leader Example</h3>
+          <p class="small"><strong>Tool:</strong> Data dashboard · <strong>Behavior:</strong> 15‑min weekly data huddle · <strong>Outcome:</strong> +5% STAAR item mastery · <strong>Evidence:</strong> agendas + tracker.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://edbostic83.github.io/toolsto-impact-fixed/#ten-day" target="_blank" rel="noopener">Draft 10‑Day Sprint</a>
+          </div>
+        </div>
+        <div class="callout">
+          <h3 class="small" style="margin-top:0">Counselor Example</h3>
+          <p class="small"><strong>Tool:</strong> SEL small groups · <strong>Behavior:</strong> Weekly check‑ins for at‑risk students · <strong>Outcome:</strong> +10% attendance · <strong>Evidence:</strong> anonymized notes.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://edbostic83.github.io/toolsto-impact-fixed/#guided" target="_blank" rel="noopener">Start Guided Mode</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tables">
+      <h2>Tables & Worksheets (copy into your notes)</h2>
+
+      <article>
+        <h3>Tool Trap — Activity Table</h3>
+        <table aria-label="Tool Trap activity table">
+          <thead>
+            <tr>
+              <th>Tool Name</th><th>Purpose</th><th>Time Spent</th><th>Impact Evidence</th><th>Noise or Progress?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Example: Class Dashboard</td><td>Track grades</td><td>3 hrs/week</td><td>Minimal</td><td>Noise</td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Impact Ladder — Discussion</h3>
+        <table aria-label="Impact Ladder discussion table">
+          <thead>
+            <tr><th>Ladder Step</th><th>What It Looks Like Here</th><th>What’s Missing</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tool</strong></td><td>Software purchase</td><td></td></tr>
+            <tr><td><strong>Use</strong></td><td>Teachers log in</td><td></td></tr>
+            <tr><td><strong>Behavior</strong></td><td>Instructional shifts</td><td></td></tr>
+            <tr><td><strong>Outcome</strong></td><td>Student growth</td><td></td></tr>
+            <tr><td><strong>Evidence</strong></td><td>Proof of sustainability</td><td></td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Pitch Builder — Process Plug‑In + Sell It</h3>
+        <table aria-label="Pitch builder table">
+          <thead>
+            <tr><th>Process</th><th>Pain Point</th><th>AI Step</th><th>2‑Sentence Pitch</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>PD Scheduling</td><td>Late sign‑ups</td><td>Auto reminders</td><td>“By automating PD sign‑ins, we’ll save hours and capture full attendance.”</td></tr>
+            <tr><td>Walkthrough Debriefs</td><td>Inconsistent notes</td><td>Prompted summaries</td><td>“We’ll standardize coaching notes so trends are visible each Friday.”</td></tr>
+            <tr><td>IEP Prep</td><td>Time crunch</td><td>Checklist + template</td><td>“One prep pass yields cleaner meetings and fewer follow‑ups.”</td></tr>
+            <tr><td>Family Comms</td><td>Language barriers</td><td>Auto translate SMS</td><td>“Weekly texts in home language increase engagement without new apps.”</td></tr>
+            <tr><td>PLC Goals</td><td>Too broad</td><td>RISEN guardrails</td><td>“We’ll scope goals to 10‑day sprints with evidence artifacts.”</td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section id="future">
+      <h2>Known Glitches & What’s Coming in v2.0</h2>
+      <ul class="tight small">
+        <li><strong>Occasional layout quirks:</strong> If a section doesn’t load cleanly, refresh once. We’re improving sticky nav + focus states.</li>
+        <li><strong>Mobile polish:</strong> Adding better spacing and larger touch targets for small screens.</li>
+        <li><strong>Data persistence:</strong> Your inputs already autosave locally; v2.0 adds clearer status and reset logic.</li>
+        <li><strong>Guided Wizard:</strong> More roles (counselor variations) and smarter step‑seeding.</li>
+        <li><strong>Accessibility:</strong> Additional WCAG checks and contrast presets.</li>
+      </ul>
+      <div class="note small">
+        Have an idea or found a bug? Use the <a href="https://edbostic83.github.io/toolsto-impact-fixed/#connect" target="_blank" rel="noopener">Contact</a> button on the Living Lab to suggest features. We’re iterating this month.
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>About the Presenters & Contact</h2>
+      <div class="grid g-2">
+        <div>
+          <h3 style="margin-top:0">Elizabeth Bostic</h3>
+          <ul class="tight">
+            <li>Grants & Special Revenue Manager · Systems Builder · Leadership Coach</li>
+            <li>Email: <a href="mailto:edbostic83@gmail.com">edbostic83@gmail.com</a></li>
+            <li>Twitter/X: <a href="https://twitter.com/Msedbostic" target="_blank" rel="noopener">@Msedbostic</a></li>
+            <li>Instagram: <a href="https://instagram.com/cultureaintjustcupcaskes" target="_blank" rel="noopener">@cultureaintjustcupcaskes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Raisha Allen</h3>
+          <ul class="tight">
+            <li>Educational Leader · Equity & Community Engagement</li>
+            <li>(Add preferred contact here.)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="small">This “How‑To” is a companion to the Living Lab. It’s designed for workshops and can be embedded or printed. Palette: Deep Navy / Gold / White for room‑back readability.</p>
+      </div>
+      <div class="tight">
+        <ul class="tight small">
+          <li><a href="https://edbostic83.github.io/toolsto-impact-fixed/" target="_blank" rel="noopener">Open the Living Lab</a></li>
+          <li><a href="#modules">Skip to Modules</a></li>
+          <li><a href="#tables">Skip to Tables</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple font-size adjuster
+    let base = 100;
+    function adjFont(step){
+      base = Math.max(85, Math.min(130, base + step*5));
+      document.documentElement.style.fontSize = base + '%';
+    }
+    // High contrast toggle
+    function toggleHC(){
+      const btn = document.getElementById('hcbtn');
+      const on = document.documentElement.classList.toggle('hc');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  </script>
+</body>
+</html>
